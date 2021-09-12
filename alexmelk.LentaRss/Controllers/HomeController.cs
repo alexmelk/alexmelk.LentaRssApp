@@ -14,12 +14,13 @@ namespace alexmelk.LentaRss.Controllers
     [Route("api/[controller]")]
     public class HomeController : ControllerBase
     {
-        private LentaRss.Services.LentaRss _rss;
-        public HomeController(LentaRss.Services.LentaRss rss)
+        private IRssReader _rss;
+        public HomeController(IRssReader rss)
         {
             _rss = rss;
         }
-        public async Task<string> Get()
+        [Route("getLentaRss")]
+        public async Task<string> GetLentaRss()
         {
             return await _rss.GetItemsSerialize();
         }

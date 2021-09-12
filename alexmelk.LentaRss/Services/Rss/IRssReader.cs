@@ -7,6 +7,7 @@ namespace alexmelk.LentaRss.Services
 {
     public interface IRssReader
     {
-        Task<List<SyndicationItem>> GetRssItems();
+        Task<List<SyndicationItem>> GetSyndicationItems(string xml);
+        Task<string> GetItemsSerialize();
     }
 }

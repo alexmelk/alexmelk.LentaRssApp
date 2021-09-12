@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>8999f26e-a318-421d-9ea4-3ddec752e1fd</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +14,30 @@
 
   <ItemGroup>
     <Folder Include="Client\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Client\app\package.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Client\app\dist\css\app.1aec9fcd.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Client\app\dist\favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Client\app\dist\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Client\app\dist\js\app.1ed371de.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Client\app\dist\js\chunk-vendors.54b61e0a.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

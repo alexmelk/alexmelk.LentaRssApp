@@ -70,12 +70,14 @@ namespace alexmelk.LentaRss.Services
 
         private ResultModel ExceptionHandler(Exception e)
         {
-            string errorText = "";
+            var errorText = "";
+            var showInformation = false;
             switch (e.Message)
             {
                 case "Этот хост неизвестен.":
                     {
                         errorText = $"Не удалось связаться с сервисом <b>{_serviceName}</b> :((";
+                        showInformation = true;
                         break;
                     }
                 default:
@@ -85,7 +87,7 @@ namespace alexmelk.LentaRss.Services
                     }
             }
 
-            return new ResultModel { Result = false, InformationText = errorText, ShowInformation = false };
+            return new ResultModel { Result = false, InformationText = errorText, ShowInformation = showInformation };
         }
     }
 }
